@@ -1,0 +1,152 @@
+html{
+    font-size: 18px;
+    background-color:  hsl(226, 43%, 10%);
+    color: #FAFAFA;
+    font-family: 'Rubik' ('https://fonts.google.com/specimen/Rubik');
+
+}
+*{
+    box-sizing: border-box;
+}
+img{
+    width: 45%;
+    height: auto;
+    border:3px solid #FAFAFA;
+    border-radius: 50%;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 250px 1fr 1fr 1fr;
+    grid-template-areas: 
+    'user-card work play study'
+    'user-card exercise social selfcare'
+    ;
+    gap: 15px;
+    margin: 2.5% auto;
+    width: 80%;
+}
+.user-card{
+    grid-area: user-card;
+
+}
+#user-card-top{
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 16px;
+    font-size: 40px;
+    position: relative;
+    padding: 0.75em;
+    z-index: 2;
+}
+#user-card-top span{
+    display: block;
+}
+#user-card-bottom{
+    background-color:   hsl(235, 46%, 20%);
+    border-radius: 16px;
+    font-size: 18px;
+    top: -2.5em;
+    position: relative;
+    padding: 2em 2em 1em 2em;
+    height: 43.8%;
+}
+#user-card-bottom p:hover{
+color:  hsl(236, 100%, 87%);
+}
+.profile-details{
+    color: purple;
+    font-size: 18px;
+}
+.grid-item-main{
+    border-radius: 18px;
+}
+.svg{
+    float: right;
+}
+.icon{
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+.grid-item{
+    position: relative;
+    height: 80%;
+    bottom: -20%;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 18px;
+}
+.grid-item-row1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    padding: 0 1em;
+}
+.grid-item-row2{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 2.5em;
+}
+.grid-item-row2 span{
+    font-size: 18px;
+    display: block;
+    
+}
+.work{
+    position: relative;
+    grid-area: work;
+    background-color:  hsl(15, 100%, 70%);
+}
+.play{
+    position: relative;
+    grid-area: play;
+    background-color: hsl(195, 74%, 62%);
+}
+.study{
+    position: relative;
+    grid-area: study;
+    background-color: hsl(348, 100%, 68%);
+
+}
+.exercise{
+    position: relative;
+    grid-area: exercise;
+    background-color: hsl(145, 58%, 55%);
+}
+.social{
+    position: relative;
+    grid-area: social;
+    background-color:  hsl(264, 64%, 52%);
+}
+.selfcare{
+    position: relative;
+    grid-area: selfcare;
+    background-color:  hsl(43, 84%, 65%);
+}.attribution { 
+    font-size: 11px; 
+    text-align: center
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (max-width: 950px){
+    .grid-container{
+        grid-template-columns: max-content;
+        grid-template-areas: 
+        'user-card' 
+        'work'
+        'play'
+        'study'
+        'exercise'
+        'social'
+        'selfcare'
+        ;
+        width: 60%;
+        margin: 0 auto;
+    }
+    #user-card-bottom{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+    }
+    }
